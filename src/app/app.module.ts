@@ -11,9 +11,15 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { ResourceTypeComponent } from './components/resource-type/resource-type.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { ResourceOptionComponent } from './components/resource-option/resource-option.component';
 
 @NgModule({
-  declarations: [AppComponent, ImgUploaderComponent, ResourceTypeComponent],
+  declarations: [
+    AppComponent,
+    ImgUploaderComponent,
+    ResourceTypeComponent,
+    ResourceOptionComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
