@@ -12,6 +12,8 @@ import { FormsModule } from '@angular/forms';
 import { ResourceTypeComponent } from './components/resource-type/resource-type.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { ResourceOptionComponent } from './components/resource-option/resource-option.component';
+import { SchedulerComponent } from './components/scheduler/scheduler.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { ResourceOptionComponent } from './components/resource-option/resource-o
     ImgUploaderComponent,
     ResourceTypeComponent,
     ResourceOptionComponent,
+    SchedulerComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { ResourceOptionComponent } from './components/resource-option/resource-o
     MatFormFieldModule,
     MatInputModule,
     MatCheckboxModule,
+    MatButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

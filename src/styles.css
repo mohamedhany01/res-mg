@@ -12,9 +12,3 @@ body {
 .card {
   padding: 2rem;
 }
-
-.section-one {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}

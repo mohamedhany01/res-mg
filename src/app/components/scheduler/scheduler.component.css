@@ -1,0 +1,17 @@
+/* Quick fix */
+.mat-mdc-card-header-text {
+  display: none !important;
+}
+
+.scheduler-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+.buttons button {
+  margin: 0 0.3rem;
+}
