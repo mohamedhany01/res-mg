@@ -15,3 +15,24 @@
 .buttons button {
   margin: 0 0.3rem;
 }
+
+.week-settings {
+  margin-top: 2rem;
+}
+
+.day-settings {
+  display: flex;
+}
+
+.date {
+  margin-left: 3rem;
+}
+
+.spacer {
+  margin: 0 1rem;
+}
+
+.copy {
+  display: inline-block;
+  margin-left: 5rem;
+}
