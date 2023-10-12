@@ -8,3 +8,13 @@ body {
   margin: 0;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
 }
+
+.card {
+  padding: 2rem;
+}
+
+.section-one {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

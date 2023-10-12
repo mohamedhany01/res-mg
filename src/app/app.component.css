@@ -1,0 +1,7 @@
+main {
+  background-color: #dfe1e3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 2rem;
+}
