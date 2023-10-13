@@ -1,0 +1,82 @@
+<form [formGroup]="schedulerForm">
+  <div class="day-extra-wrapper">
+    <div class="day-settings">
+      <div>
+        <mat-checkbox formControlName="active">{{ name }}</mat-checkbox>
+      </div>
+      <div *ngIf="schedulerForm.value.active" class="settings-row">
+        <div class="date">
+          <mat-form-field>
+            <mat-label>Time to start</mat-label>
+            <input
+              matInput
+              [matDatepicker]="startPicker"
+              formControlName="start" />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="startPicker"></mat-datepicker-toggle>
+            <mat-datepicker #startPicker></mat-datepicker>
+          </mat-form-field>
+          <span class="spacer">--</span>
+          <mat-form-field>
+            <mat-label>Time to end</mat-label>
+            <input matInput [matDatepicker]="endPicker" formControlName="end" />
+            <mat-datepicker-toggle
+              matIconSuffix
+              [for]="endPicker"></mat-datepicker-toggle>
+            <mat-datepicker #endPicker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <button
+          mat-icon-button
+          class="toggle-button"
+          type="button"
+          (click)="addExtraTimeSlot()">
+          <mat-icon>add</mat-icon>
+        </button>
+        <button mat-icon-button class="copy" type="button">
+          <mat-icon>file_copy</mat-icon>
+        </button>
+      </div>
+    </div>
+
+    <div formArrayName="multiple" *ngIf="schedulerForm.value.active">
+      <div *ngFor="let timeSlot of multipleSlots.controls; let i = index">
+        <div [formGroupName]="i" class="extra">
+          <div>
+            <mat-form-field>
+              <mat-label>Time to start</mat-label>
+              <input
+                matInput
+                [matDatepicker]="startPicker"
+                formControlName="multipleStart" />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="startPicker"></mat-datepicker-toggle>
+              <mat-datepicker #startPicker></mat-datepicker>
+            </mat-form-field>
+            <span class="spacer">--</span>
+            <mat-form-field>
+              <mat-label>Time to end</mat-label>
+              <input
+                matInput
+                [matDatepicker]="endPicker"
+                formControlName="multipleEnd" />
+              <mat-datepicker-toggle
+                matIconSuffix
+                [for]="endPicker"></mat-datepicker-toggle>
+              <mat-datepicker #endPicker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <button
+            mat-icon-button
+            class="toggle-button"
+            type="button"
+            (click)="removeExtraTimeSlot(i)">
+            <mat-icon>clear</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>

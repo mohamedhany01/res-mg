@@ -21,6 +21,7 @@ import { StoreModule } from '@ngrx/store';
 import { settingsReducer } from './store/reducers/app.reducer';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
+import { DayComponent } from './components/scheduler/day/day.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MatListModule } from '@angular/material/list';
     ResourceTypeComponent,
     ResourceOptionComponent,
     SchedulerComponent,
+    DayComponent,
   ],
   imports: [
     BrowserModule,

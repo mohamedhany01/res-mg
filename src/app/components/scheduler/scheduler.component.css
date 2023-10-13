@@ -12,40 +12,11 @@
   display: flex;
   align-items: center;
 }
+
 .buttons button {
   margin: 0 0.3rem;
 }
 
 .week-settings {
   margin-top: 2rem;
-}
-
-.day-settings {
-  display: flex;
-}
-
-.settings-row {
-  display: flex;
-}
-
-.date {
-  margin-left: 3rem;
-}
-
-.spacer {
-  margin: 0 1rem;
-}
-
-.add-button {
-  margin-left: 1rem;
-}
-
-.copy {
-  display: inline-block;
-  margin-left: 5rem;
-}
-
-.extra {
-  display: flex;
-  margin-left: 12rem;
 }
