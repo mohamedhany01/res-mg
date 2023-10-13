@@ -24,6 +24,11 @@ export const initialState: Readonly<AppSettings> = {
     oneDay: false,
     moreThanOneDay: false,
   },
+  scheduler: {
+    active: false,
+    startData: '',
+    endDate: '',
+  },
 };
 
 const _settingsReducer = createReducer(

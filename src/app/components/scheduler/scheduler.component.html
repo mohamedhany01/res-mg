@@ -15,40 +15,53 @@
     </div>
 
     <div class="week-settings">
-      <!-- TODO: generate this dynamically -->
-      <div class="day-settings">
-        <div>
-          <mat-checkbox class="example-margin">Saturday</mat-checkbox>
+      {{ schedulerForm.value | json }}
+      <!-- {{loadedSettings| json}} -->
+      <!-- {{newSettings| json}} -->
+      <form [formGroup]="schedulerForm">
+        <div class="day-settings">
+          <div>
+            <mat-checkbox formControlName="active">Saturday</mat-checkbox>
+          </div>
+          <div *ngIf="schedulerForm.value.active" class="settings-row">
+            <div class="date">
+              <mat-form-field>
+                <mat-label>Time to start</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="startPicker"
+                  formControlName="start" />
+                <mat-datepicker-toggle
+                  matIconSuffix
+                  [for]="startPicker"></mat-datepicker-toggle>
+                <mat-datepicker #startPicker></mat-datepicker>
+              </mat-form-field>
+              <span class="spacer">--</span>
+              <mat-form-field>
+                <mat-label>Time to end</mat-label>
+                <input
+                  matInput
+                  [matDatepicker]="endPicker"
+                  formControlName="end" />
+                <mat-datepicker-toggle
+                  matIconSuffix
+                  [for]="endPicker"></mat-datepicker-toggle>
+                <mat-datepicker #endPicker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <button
+              mat-icon-button
+              class="toggle-button"
+              type="button"
+              (click)="addExtraTimeSlot()">
+              <mat-icon>add</mat-icon>
+            </button>
+            <button mat-icon-button class="copy" type="button">
+              <mat-icon>file_copy</mat-icon>
+            </button>
+          </div>
         </div>
-        <div class="date">
-          <mat-form-field class="example-form-field">
-            <mat-label>Time to start</mat-label>
-            <input matInput [matDatepicker]="startPicker" />
-            <mat-datepicker-toggle
-              matIconSuffix
-              [for]="startPicker"></mat-datepicker-toggle>
-            <mat-datepicker #startPicker></mat-datepicker>
-          </mat-form-field>
-          <span class="spacer">--</span>
-          <mat-form-field class="example-form-field">
-            <mat-label>Time to end</mat-label>
-            <input matInput [matDatepicker]="endPicker" />
-            <mat-datepicker-toggle
-              matIconSuffix
-              [for]="endPicker"></mat-datepicker-toggle>
-            <mat-datepicker #endPicker></mat-datepicker>
-          </mat-form-field>
-        </div>
-
-        <button mat-icon-button>
-          <mat-icon>add</mat-icon>
-          <!-- clear -->
-        </button>
-
-        <button mat-icon-button class="copy">
-          <mat-icon>file_copy</mat-icon>
-        </button>
-      </div>
+      </form>
     </div>
   </mat-card>
 </section>

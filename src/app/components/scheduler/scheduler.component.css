@@ -24,12 +24,20 @@
   display: flex;
 }
 
+.settings-row {
+  display: flex;
+}
+
 .date {
   margin-left: 3rem;
 }
 
 .spacer {
   margin: 0 1rem;
+}
+
+.add-button {
+  margin-left: 1rem;
 }
 
 .copy {
