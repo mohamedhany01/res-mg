@@ -5,3 +5,8 @@ export const addSettings = createAction(
   '[add Settings] add',
   props<{ settings: AppSettings }>()
 );
+
+export const loadSettings = createAction(
+  '[Settings] Load Settings Success',
+  props<{ settings: AppSettings }>()
+);
