@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
 import { AppSettings } from 'src/app/store/modules/app-settings.interface';
 import { selectSettings } from 'src/app/store/selectors/app.selector';
@@ -15,6 +15,11 @@ export class SchedulerComponent implements OnInit {
 
   newSettings!: AppSettings;
 
+  // Time slot array
+  get multipleSlots() {
+    return this.schedulerForm.get('multiple') as FormArray;
+  }
+
   constructor(
     private builder: FormBuilder,
     private store: Store
@@ -25,12 +30,7 @@ export class SchedulerComponent implements OnInit {
       active: new FormControl(''),
       start: new FormControl(''),
       end: new FormControl(''),
-      multiple: this.builder.array([
-        this.builder.group({
-          multipleStart: new FormControl(''),
-          multipleEnd: new FormControl(''),
-        }),
-      ]),
+      multiple: this.builder.array([]),
     });
 
     this.store.select(selectSettings).subscribe(settings => {
@@ -41,10 +41,15 @@ export class SchedulerComponent implements OnInit {
   }
 
   addExtraTimeSlot() {
-    console.log('Add extra time slot');
+    const newTimeSlot = this.builder.group({
+      multipleStart: new FormControl(''),
+      multipleEnd: new FormControl(''),
+    });
+
+    this.multipleSlots.push(newTimeSlot);
   }
 
   removeExtraTimeSlot(index: number) {
-    console.log('Remove extra time slot' + index);
+    this.multipleSlots.removeAt(index);
   }
 }

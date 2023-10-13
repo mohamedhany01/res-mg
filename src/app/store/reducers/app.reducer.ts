@@ -25,7 +25,7 @@ export const initialState: Readonly<AppSettings> = {
     moreThanOneDay: false,
   },
   scheduler: {
-    active: false,
+    active: true,
     startData: '',
     endDate: '',
   },

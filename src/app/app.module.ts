@@ -20,6 +20,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { StoreModule } from '@ngrx/store';
 import { settingsReducer } from './store/reducers/app.reducer';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { MatRadioModule } from '@angular/material/radio';
     ReactiveFormsModule,
     MatIconModule,
     MatRadioModule,
+    MatListModule,
     StoreModule.forRoot({ settings: settingsReducer }, {}),
   ],
   providers: [],

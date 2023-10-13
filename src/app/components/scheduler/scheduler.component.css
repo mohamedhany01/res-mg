@@ -44,3 +44,8 @@
   display: inline-block;
   margin-left: 5rem;
 }
+
+.extra {
+  display: flex;
+  margin-left: 12rem;
+}
