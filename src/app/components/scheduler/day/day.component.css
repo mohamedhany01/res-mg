@@ -14,7 +14,7 @@
   margin: 0 1rem;
 }
 
-.add-button {
+.add-button, .remove-button {
   margin-left: 1rem;
 }
 
