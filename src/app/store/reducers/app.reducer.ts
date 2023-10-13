@@ -9,6 +9,21 @@ export const initialState: Readonly<AppSettings> = {
     avatarUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     avatarAlt: 'Supplier',
   },
+  resourceAvailability: {
+    availabilityTime: '',
+    resourceTime: {
+      fixedTime: false,
+      serviceTime: false,
+    },
+    reservation: {
+      once: false,
+      multiple: false,
+    },
+  },
+  resourceType: {
+    oneDay: false,
+    moreThanOneDay: false,
+  },
 };
 
 const _settingsReducer = createReducer(

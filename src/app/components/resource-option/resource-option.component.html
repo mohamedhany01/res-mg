@@ -14,7 +14,9 @@
           <mat-checkbox>Service time</mat-checkbox>
           <mat-checkbox>Fixed time</mat-checkbox>
         </div>
-        <div class="log">
+        <div
+          *ngIf="loadedSettings?.resourceAvailability?.resourceTime?.fixedTime"
+          class="log">
           <mat-form-field>
             <input matInput type="number" />
           </mat-form-field>
@@ -27,7 +29,9 @@
           <mat-checkbox>One time reservation</mat-checkbox>
           <mat-checkbox>Multiple reservation</mat-checkbox>
         </div>
-        <div class="log">
+        <div
+          *ngIf="loadedSettings?.resourceAvailability?.reservation?.multiple"
+          class="log">
           <mat-form-field>
             <input matInput type="number" />
           </mat-form-field>
