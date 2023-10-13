@@ -1,0 +1,18 @@
+.supplier-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.supplier-info .avatar {
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+.supplier-info .avatar img {
+  min-width: 100%;
+}
+
+.supplier-name,
+.full-width {
+  width: 100%;
+}

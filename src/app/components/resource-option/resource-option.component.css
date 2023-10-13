@@ -1,9 +1,23 @@
-.example-form {
-  min-width: 150px;
-  max-width: 500px;
+.options {
+  display: flex;
+  flex-direction: column;
+}
+.options .availability {
   width: 100%;
 }
 
-.example-full-width {
+.options .triggers {
+  display: flex;
+  align-items: center;
+}
+
+.resource-time,
+.reservation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.full-width {
   width: 100%;
 }
