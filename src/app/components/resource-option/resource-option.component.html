@@ -1,42 +1,64 @@
+<!-- {{ loadedSettings | json }} -->
+<!-- {{ newSettings | json }} -->
 <section class="resource-options">
-  <mat-card class="card">
-    <div class="options">
-      <div class="availability">
-        <mat-form-field class="full-width">
-          <mat-label>Resource availability</mat-label>
-          <input matInput type="number" />
-        </mat-form-field>
-      </div>
-
-      <div class="resource-time">
-        <div class="triggers">
-          <div>Resource Time</div>
-          <mat-checkbox>Service time</mat-checkbox>
-          <mat-checkbox>Fixed time</mat-checkbox>
-        </div>
-        <div
-          *ngIf="loadedSettings?.resourceAvailability?.resourceTime?.fixedTime"
-          class="log">
-          <mat-form-field>
+  <form>
+    <mat-card class="card">
+      <div class="options">
+        <div class="availability">
+          <mat-form-field class="full-width">
+            <mat-label>Resource availability</mat-label>
             <input matInput type="number" />
           </mat-form-field>
         </div>
-      </div>
 
-      <div class="reservation">
-        <div class="triggers">
-          <div>Reservation</div>
-          <mat-checkbox>One time reservation</mat-checkbox>
-          <mat-checkbox>Multiple reservation</mat-checkbox>
+        <div class="resource-time">
+          <div class="triggers">
+            <div>Resource Time</div>
+            <mat-checkbox>Service time</mat-checkbox>
+            <mat-checkbox
+              name="fixedTime"
+              [(ngModel)]="
+                (newSettings.resourceAvailability?.resourceTime)!.fixedTime
+              "
+              >Fixed time</mat-checkbox
+            >
+          </div>
+          <div
+            *ngIf="
+              loadedSettings?.resourceAvailability?.resourceTime?.fixedTime ||
+              newSettings?.resourceAvailability?.resourceTime?.fixedTime
+            "
+            class="log">
+            <mat-form-field>
+              <input matInput type="number" />
+            </mat-form-field>
+          </div>
         </div>
-        <div
-          *ngIf="loadedSettings?.resourceAvailability?.reservation?.multiple"
-          class="log">
-          <mat-form-field>
-            <input matInput type="number" />
-          </mat-form-field>
+
+        <div class="reservation">
+          <div class="triggers">
+            <div>Reservation</div>
+            <mat-checkbox>One time reservation</mat-checkbox>
+            <mat-checkbox
+              name="multiple"
+              [(ngModel)]="
+                (newSettings.resourceAvailability?.reservation)!.multiple
+              "
+              >Multiple reservation</mat-checkbox
+            >
+          </div>
+          <div
+            *ngIf="
+              loadedSettings?.resourceAvailability?.reservation?.multiple ||
+              newSettings?.resourceAvailability?.reservation?.multiple
+            "
+            class="log">
+            <mat-form-field>
+              <input matInput type="number" />
+            </mat-form-field>
+          </div>
         </div>
       </div>
-    </div>
-  </mat-card>
+    </mat-card>
+  </form>
 </section>

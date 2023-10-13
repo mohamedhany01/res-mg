@@ -6,7 +6,7 @@
     "start:fly": "npx -p @angular/cli ng serve",
     "build:fly": "npx -p @angular/cli ng build",
     "watch:fly": "npx -p @angular/cli ng build --watch --configuration development",
-    "prepare:fly": "npx -p @angular/cli ng lint --fix && npx prettier --write .",
+    "prepare:fly": "npx prettier --write . && npx -p @angular/cli ng lint --fix",
     "build:fly:production": "npx -p @angular/cli ng build -c=production",
     "prettier:fly:check": "npx prettier --check .",
     "prettier:fly:fix": "npx prettier --write .",

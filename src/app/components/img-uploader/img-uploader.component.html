@@ -1,21 +1,29 @@
+<!-- {{ loadedSettings | json }}
+{{ newSettings | json }} -->
 <section class="img-uploader">
-  <mat-card class="card">
-    <button (click)="saveSettings()">Save</button>
-    <mat-card-header>
-      <mat-card-title-group class="supplier-info">
-        <div class="avatar">
-          <img
-            mat-card-sm-image
-            alt="{{ loadedSettings?.supplier?.avatarAlt }}"
-            src="{{ loadedSettings?.supplier?.avatarUrl }}" />
-        </div>
-        <div class="supplier-name">
-          <mat-form-field class="full-width">
-            <mat-label>Supplier Name</mat-label>
-            <input matInput value="{{ loadedSettings?.supplier?.name }}" />
-          </mat-form-field>
-        </div>
-      </mat-card-title-group>
-    </mat-card-header>
-  </mat-card>
+  <form (ngSubmit)="onSubmit()">
+    <mat-card class="card">
+      <button type="submit">Save</button>
+      <mat-card-header>
+        <mat-card-title-group class="supplier-info">
+          <div class="avatar">
+            <img
+              mat-card-sm-image
+              alt="{{ loadedSettings?.supplier?.avatarAlt }}"
+              src="{{ loadedSettings?.supplier?.avatarUrl }}" />
+          </div>
+          <div class="supplier-name">
+            <mat-form-field class="full-width">
+              <mat-label>Supplier Name</mat-label>
+              <input
+                [(ngModel)]="newSettings.supplier.name"
+                name="name"
+                matInput />
+            </mat-form-field>
+            <span>{{ loadedSettings?.supplier?.name }}</span>
+          </div>
+        </mat-card-title-group>
+      </mat-card-header>
+    </mat-card>
+  </form>
 </section>

@@ -10,12 +10,41 @@ import { selectSettings } from 'src/app/store/selectors/app.selector';
 })
 export class ResourceOptionComponent implements OnInit {
   loadedSettings: AppSettings | null = null;
+  newSettings: AppSettings;
 
-  constructor(private store: Store) {}
+  constructor(private store: Store) {
+    const availabilityTime =
+      this.loadedSettings?.resourceAvailability?.availabilityTime;
+
+    const fixedTime =
+      this.loadedSettings?.resourceAvailability?.resourceTime?.fixedTime;
+    const serviceTime =
+      this.loadedSettings?.resourceAvailability?.resourceTime?.serviceTime;
+
+    const once = this.loadedSettings?.resourceAvailability?.reservation?.once;
+
+    const multiple =
+      this.loadedSettings?.resourceAvailability?.reservation?.multiple;
+
+    this.newSettings = {
+      ...this.loadedSettings,
+      supplier: this.loadedSettings?.supplier!,
+      resourceAvailability: {
+        availabilityTime: availabilityTime ? availabilityTime : '',
+        resourceTime: {
+          fixedTime: fixedTime ? fixedTime : false,
+          serviceTime: serviceTime ? serviceTime : false,
+        },
+        reservation: {
+          once: once ? once : false,
+          multiple: multiple ? multiple : false,
+        },
+      },
+    };
+  }
 
   ngOnInit() {
     this.store.select(selectSettings).subscribe(settings => {
-      // console.log(settings.resourceAvailability?.availabilityTime);
       if (settings) {
         this.loadedSettings = settings;
       }

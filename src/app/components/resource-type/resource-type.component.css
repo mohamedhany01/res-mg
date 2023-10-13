@@ -1,3 +1,7 @@
+.resource-type {
+  margin-top: 2rem;
+}
+
 .settings {
   display: flex;
   align-items: center;

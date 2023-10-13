@@ -11,7 +11,8 @@ import { selectSettings } from 'src/app/store/selectors/app.selector';
 })
 export class ImgUploaderComponent implements OnInit {
   loadedSettings: AppSettings | null = null;
-  // updatedSupplierName: string | = '';
+
+  newSettings!: AppSettings;
 
   constructor(private store: Store) {}
 
@@ -19,14 +20,24 @@ export class ImgUploaderComponent implements OnInit {
     this.store.select(selectSettings).subscribe(settings => {
       if (settings) {
         this.loadedSettings = settings;
+        this.newSettings = {
+          ...this.loadedSettings,
+          supplier: {
+            name: this.loadedSettings?.supplier.name
+              ? this.loadedSettings?.supplier.name
+              : '',
+            avatarAlt: '',
+            avatarUrl: '',
+          },
+        };
       }
     });
   }
 
-  saveSettings() {
+  onSubmit() {
     const updatedSupplier = {
       ...this.loadedSettings!.supplier,
-      name: 'Updated TODO',
+      name: this.newSettings.supplier.name,
     };
 
     const updatedSettings: AppSettings = {

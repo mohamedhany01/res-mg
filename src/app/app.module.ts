@@ -19,6 +19,7 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { StoreModule } from '@ngrx/store';
 import { settingsReducer } from './store/reducers/app.reducer';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { settingsReducer } from './store/reducers/app.reducer';
     MatNativeDateModule,
     ReactiveFormsModule,
     MatIconModule,
+    MatRadioModule,
     StoreModule.forRoot({ settings: settingsReducer }, {}),
   ],
   providers: [],

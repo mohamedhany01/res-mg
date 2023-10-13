@@ -5,7 +5,7 @@ import { createReducer, on } from '@ngrx/store';
 
 export const initialState: Readonly<AppSettings> = {
   supplier: {
-    name: 'foo',
+    name: '',
     avatarUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
     avatarAlt: 'Supplier',
   },
