@@ -6,20 +6,21 @@
       <div class="options">
         <div class="availability">
           <mat-form-field class="full-width">
-            <mat-label>Resource availability</mat-label>
+            <mat-label i18n>Resource availability</mat-label>
             <input matInput type="number" />
           </mat-form-field>
         </div>
 
         <div class="resource-time">
           <div class="triggers">
-            <div>Resource Time</div>
-            <mat-checkbox>Service time</mat-checkbox>
+            <div i18n>Resource Time</div>
+            <mat-checkbox i18n>Service time</mat-checkbox>
             <mat-checkbox
               name="fixedTime"
               [(ngModel)]="
                 (newSettings.resourceAvailability?.resourceTime)!.fixedTime
               "
+              i18n
               >Fixed time</mat-checkbox
             >
           </div>
@@ -37,13 +38,14 @@
 
         <div class="reservation">
           <div class="triggers">
-            <div>Reservation</div>
-            <mat-checkbox>One time reservation</mat-checkbox>
+            <div i18n>Reservation</div>
+            <mat-checkbox i18n>One time reservation</mat-checkbox>
             <mat-checkbox
               name="multiple"
               [(ngModel)]="
                 (newSettings.resourceAvailability?.reservation)!.multiple
               "
+              i18n
               >Multiple reservation</mat-checkbox
             >
           </div>

@@ -2,20 +2,26 @@
   <mat-card class="card">
     <div class="scheduler-header">
       <div class="info">
-        <mat-card-title>Resources scheduler</mat-card-title>
-        <mat-card-subtitle
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit,
-          pariatur!</mat-card-subtitle
+        <mat-card-title i18n>Resources scheduler</mat-card-title>
+        <mat-card-subtitle i18n
+          >Configure your week settings here. Simply move the sliders and
+          add/remove break times to set up work hours.</mat-card-subtitle
         >
       </div>
       <div class="buttons">
-        <button mat-flat-button>Basic settings</button>
-        <button mat-flat-button color="primary">Advanced settings</button>
+        <button mat-flat-button i18n>Basic settings</button>
+        <button mat-flat-button color="primary" i18n>Advanced settings</button>
       </div>
     </div>
 
-    <div class="week-settings" *ngFor="let day of days">
-      <app-day [name]="day"></app-day>
+    <div class="week-settings">
+      <app-day i18n-name name="Saturday"></app-day>
+      <app-day i18n-name name="Sunday"></app-day>
+      <app-day i18n-name name="Monday"></app-day>
+      <app-day i18n-name name="Tuesday"></app-day>
+      <app-day i18n-name name="Wednesday"></app-day>
+      <app-day i18n-name name="Thursday"></app-day>
+      <app-day i18n-name name="Friday"></app-day>
     </div>
   </mat-card>
 </section>

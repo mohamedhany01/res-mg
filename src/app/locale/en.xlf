@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="1737753151350322492" datatype="html">
+        <source><x id="PH" equiv-text="this.title"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/app.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="638853778925067319" datatype="html">
+        <source>Supplier Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/img-uploader/img-uploader.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3770458278723610599" datatype="html">
+        <source>Resource availability</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3249726652851993192" datatype="html">
+        <source>Resource Time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">16</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5101181365497646575" datatype="html">
+        <source>Service time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5423958154909925236" datatype="html">
+        <source>Fixed time</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6545183602232691048" datatype="html">
+        <source>Reservation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5203232833051236078" datatype="html">
+        <source>One time reservation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3721837758970059032" datatype="html">
+        <source>Multiple reservation</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3490389904880488184" datatype="html">
+        <source>Select resource type</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-type/resource-type.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6068575113959509084" datatype="html">
+        <source>One Day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-type/resource-type.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1656522007502925031" datatype="html">
+        <source>More that one day</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/resource-type/resource-type.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="263223603269994382" datatype="html">
+        <source>Time to start</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
+          <context context-type="linenumber">48</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="213067598216842173" datatype="html">
+        <source>Time to end</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5413691976882995270" datatype="html">
+        <source>Resources scheduler</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2025228978938480835" datatype="html">
+        <source>Configure your week settings here. Simply move the sliders and add/remove break times to set up work hours.</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">7,8</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8635746400237530953" datatype="html">
+        <source>Basic settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8821221480638803282" datatype="html">
+        <source>Advanced settings</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1830554030016307335" datatype="html">
+        <source>Saturday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6950140976689343775" datatype="html">
+        <source>Sunday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8739442281958563044" datatype="html">
+        <source>Monday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9176037901730521018" datatype="html">
+        <source>Tuesday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8798932904948432529" datatype="html">
+        <source>Wednesday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">22</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1433683192825895947" datatype="html">
+        <source>Thursday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">23</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3730139500618908668" datatype="html">
+        <source>Friday</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
+          <context context-type="linenumber">24</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

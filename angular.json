@@ -6,7 +6,10 @@
     "res-mg": {
       "i18n": {
         "sourceLocale": "en-US",
-        "locales": { "ar": "src/locale/ar.es.xlf" }
+        "locales": {
+          "ar": "src/app/locale/ar.xlf",
+          "en": "src/app/locale/en.xlf"
+        }
       },
       "projectType": "application",
       "schematics": {},
@@ -17,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "localize": ["ar"],
+            "localize": ["en"],
             "outputPath": "dist/res-mg",
             "index": "src/index.html",
             "main": "src/main.ts",
