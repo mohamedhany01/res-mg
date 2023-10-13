@@ -2,6 +2,7 @@
   "name": "res-mg",
   "version": "0.0.0",
   "scripts": {
+    "build:deploy": "ng build -c=production",
     "start:fly": "npx -p @angular/cli ng serve",
     "build:fly": "npx -p @angular/cli ng build",
     "watch:fly": "npx -p @angular/cli ng build --watch --configuration development",
