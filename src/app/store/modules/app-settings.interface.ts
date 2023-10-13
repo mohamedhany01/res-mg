@@ -4,6 +4,6 @@ import { Supplier } from './supplier.interface';
 
 export interface AppSettings {
   supplier: Supplier;
-  resourceType: ResourceType;
-  resourceAvailability: ResourceAvailability;
+  resourceType?: ResourceType;
+  resourceAvailability?: ResourceAvailability;
 }
