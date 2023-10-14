@@ -4,12 +4,13 @@
 }
 .options .availability {
   width: 100%;
+  margin-bottom: 2.5rem;
 }
 
-.options .triggers {
+/* .options .triggers {
   display: flex;
   align-items: center;
-}
+} */
 
 .resource-time,
 .reservation {

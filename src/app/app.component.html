@@ -1,13 +1,13 @@
-<main>
+<main ngClass="{{ (isMedium$ | async) ? 'small-screen' : '' }}">
   <div class="section-one">
     <app-img-uploader></app-img-uploader>
     <app-resource-type></app-resource-type>
   </div>
-  <div class="section-two">
+  <div ngClass="section-two {{ (isMedium$ | async) ? 'margin-top-2' : '' }}">
     <app-resource-option></app-resource-option>
   </div>
 
-  <div class="section-three">
+  <div ngClass="section-three {{ (isMedium$ | async) ? 'margin-top-2' : '' }}">
     <app-scheduler></app-scheduler>
   </div>
 </main>

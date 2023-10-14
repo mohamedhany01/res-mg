@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Observable } from 'rxjs';
+import { BreakpointService } from './services/breakpoint.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +10,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class AppComponent {
   title = 'res-mg';
+  isMedium$: Observable<boolean> = this.breakpointObserver.isViewportMedium();
 
-  constructor(private titleService: Title) {
+  constructor(
+    private titleService: Title,
+    private breakpointObserver: BreakpointService
+  ) {
     this.titleService.setTitle($localize`${this.title}`);
   }
 }

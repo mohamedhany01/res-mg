@@ -1,6 +1,6 @@
 <section class="resource-type">
   <mat-card class="card">
-    <div class="settings">
+    <div ngClass="settings {{ (isMedium$ | async) ? 'block' : '' }}">
       <div i18n>Select resource type</div>
       <mat-checkbox i18n>One Day</mat-checkbox>
       <mat-checkbox i18n>More that one day</mat-checkbox>

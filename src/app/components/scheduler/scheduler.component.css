@@ -1,6 +1,6 @@
 /* Quick fix */
 .mat-mdc-card-header-text {
-  display: none !important;
+  display: none;
 }
 
 .scheduler-header {
@@ -8,9 +8,17 @@
   justify-content: space-between;
 }
 
+.scheduler-header.block {
+  display: block;
+}
+
 .buttons {
   display: flex;
   align-items: center;
+}
+
+.buttons.col {
+  display: block;
 }
 
 .buttons button {

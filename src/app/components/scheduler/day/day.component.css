@@ -2,21 +2,42 @@
   display: flex;
 }
 
+.day-settings.block {
+  display: block;
+}
+
 .settings-row {
   display: flex;
+}
+
+.settings-row.block {
+  display: block;
 }
 
 .date {
   margin-left: 3rem;
 }
 
+.date.no-margin {
+  margin-left: 0;
+}
+
 .spacer {
   margin: 0 1rem;
+}
+
+.spacer.hidden {
+  display: none;
 }
 
 .add-button,
 .remove-button {
   margin-left: 1rem;
+}
+
+.add-button.no-margin,
+.remove-button.no-margin {
+  margin: 0;
 }
 
 .copy {
@@ -26,5 +47,14 @@
 
 .extra {
   display: flex;
-  margin-left: 12rem;
+  margin: 0 12rem;
+}
+
+.extra.block {
+  display: block;
+  margin: 0;
+}
+
+.margin-right {
+  margin-right: 0.5rem !important;
 }

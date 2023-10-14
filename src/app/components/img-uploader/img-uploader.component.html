@@ -5,9 +5,11 @@
     <mat-card class="card">
       <!-- <button type="submit">Save</button> -->
       <mat-card-header>
-        <mat-card-title-group class="supplier-info">
-          <div class="avatar">
+        <mat-card-title-group
+          ngClass="supplier-info {{ (isMedium$ | async) ? 'block' : '' }}">
+          <div ngClass="avatar {{ (isMedium$ | async) ? 'center' : '' }}">
             <img
+              ngClass="{{ (isMedium$ | async) ? 'margin-bottom ' : '' }}"
               mat-card-sm-image
               alt="{{ loadedSettings?.supplier?.avatarAlt }}"
               src="{{ loadedSettings?.supplier?.avatarUrl }}" />

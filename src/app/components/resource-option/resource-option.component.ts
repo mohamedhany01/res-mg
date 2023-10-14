@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { BreakpointService } from 'src/app/services/breakpoint.service';
 import { AppSettings } from 'src/app/store/modules/app-settings.interface';
 import { selectSettings } from 'src/app/store/selectors/app.selector';
 
@@ -12,7 +14,12 @@ export class ResourceOptionComponent implements OnInit {
   loadedSettings: AppSettings | null = null;
   newSettings: AppSettings;
 
-  constructor(private store: Store) {
+  isMedium$: Observable<boolean> = this.breakpointObserver.isViewportMedium();
+
+  constructor(
+    private store: Store,
+    private breakpointObserver: BreakpointService
+  ) {
     const availabilityTime =
       this.loadedSettings?.resourceAvailability?.availabilityTime;
 

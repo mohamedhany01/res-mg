@@ -1,6 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
+import { BreakpointService } from 'src/app/services/breakpoint.service';
 import { AppSettings } from 'src/app/store/modules/app-settings.interface';
 import { selectSettings } from 'src/app/store/selectors/app.selector';
 
@@ -22,9 +24,13 @@ export class DayComponent implements OnInit {
     return this.schedulerForm.get('multiple') as FormArray;
   }
 
+  isMedium$: Observable<boolean> = this.breakpointObserver.isViewportMedium();
+  isExtraSmall$: Observable<boolean> = this.breakpointObserver.isExtraSmall();
+
   constructor(
     private builder: FormBuilder,
-    private store: Store
+    private store: Store,
+    private breakpointObserver: BreakpointService
   ) {}
 
   ngOnInit(): void {

@@ -1,16 +1,32 @@
 <section class="scheduler">
   <mat-card class="card">
-    <div class="scheduler-header">
-      <div class="info">
+    <div
+      ngClass="scheduler-header {{
+        (isMedium$ | async) ? 'block margin-bottom-2' : ''
+      }}">
+      <div ngClass="info {{ (isMedium$ | async) ? 'margin-bottom-2' : '' }}">
         <mat-card-title i18n>Resources scheduler</mat-card-title>
         <mat-card-subtitle i18n
           >Configure your week settings here. Simply move the sliders and
           add/remove break times to set up work hours.</mat-card-subtitle
         >
       </div>
-      <div class="buttons">
-        <button mat-flat-button i18n>Basic settings</button>
-        <button mat-flat-button color="primary" i18n>Advanced settings</button>
+      <div ngClass="buttons {{ (isExtraSmall$ | async) ? 'col' : '' }}">
+        <button
+          mat-flat-button
+          ngClass="{{
+            (isExtraSmall$ | async) ? 'full-width margin-bottom-2' : ''
+          }}"
+          i18n>
+          Basic settings
+        </button>
+        <button
+          mat-flat-button
+          color="primary"
+          ngClass="{{ (isExtraSmall$ | async) ? 'full-width' : '' }}"
+          i18n>
+          Advanced settings
+        </button>
       </div>
     </div>
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { BreakpointService } from 'src/app/services/breakpoint.service';
 
 @Component({
   selector: 'app-scheduler',
@@ -6,13 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./scheduler.component.css'],
 })
 export class SchedulerComponent {
-  days: string[] = [
-    'Saturday',
-    'Sunday',
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-  ];
+  isMedium$: Observable<boolean> = this.breakpointObserver.isViewportMedium();
+  isExtraSmall$: Observable<boolean> = this.breakpointObserver.isExtraSmall();
+
+  constructor(private breakpointObserver: BreakpointService) {}
 }

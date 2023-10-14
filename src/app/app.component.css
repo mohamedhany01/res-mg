@@ -6,6 +6,10 @@ main {
   padding: 2rem;
 }
 
+main.small-screen {
+  display: block;
+}
+
 .section-one {
   display: flex;
   flex-direction: column;
