@@ -18,6 +18,8 @@ export class DayComponent implements OnInit {
   appSettings$: Observable<AppSettings>;
   appSettingsSubscription!: Subscription;
 
+  nestedInputCounter = 0;
+
   activeCheck: boolean | undefined;
   startDate: string | undefined;
   endData: string | undefined;
@@ -87,7 +89,7 @@ export class DayComponent implements OnInit {
           active: this.activeCheck,
         };
 
-        console.log(updatedDays);
+        // console.log(updatedDays);
       }
 
       // Create the updated settings
@@ -132,7 +134,7 @@ export class DayComponent implements OnInit {
         scheduler: { ...settings.scheduler, days: updatedDays },
       };
 
-      console.log(updatedSettings);
+      // console.log(updatedSettings);
 
       this.store.dispatch(addSettings({ settings: updatedSettings }));
     });

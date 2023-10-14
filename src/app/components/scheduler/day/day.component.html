@@ -67,7 +67,8 @@
               <input
                 matInput
                 [matDatepicker]="startPicker"
-                formControlName="multipleStart" />
+                formControlName="multipleStart"
+                #multipleStartDate />
               <mat-datepicker-toggle
                 matIconSuffix
                 [for]="startPicker"></mat-datepicker-toggle>
@@ -81,7 +82,8 @@
               <input
                 matInput
                 [matDatepicker]="endPicker"
-                formControlName="multipleEnd" />
+                formControlName="multipleEnd"
+                #multipleEndDate />
               <mat-datepicker-toggle
                 matIconSuffix
                 [for]="endPicker"></mat-datepicker-toggle>
