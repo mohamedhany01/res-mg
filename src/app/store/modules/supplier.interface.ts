@@ -1,5 +1,5 @@
 export interface Supplier {
-  name: string;
-  avatarUrl: string;
-  avatarAlt: string;
+  name?: string;
+  avatarUrl?: string;
+  avatarAlt?: string;
 }

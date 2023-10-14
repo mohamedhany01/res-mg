@@ -4,8 +4,8 @@
     <img
       ngClass="{{ (isMedium$ | async) ? 'margin-bottom ' : '' }}"
       mat-card-sm-image
-      alt="{{ loadedSettings?.supplier?.avatarAlt }}"
-      src="{{ loadedSettings?.supplier?.avatarUrl }}" />
+      alt="{{ (appSettings$ | async)?.supplier?.avatarAlt }}"
+      src="{{ (appSettings$ | async)?.supplier?.avatarUrl }}" />
   </div>
   <form class="decoder-form" [formGroup]="uploadForm" (ngSubmit)="changeImg()">
     <mat-form-field class="upload-button">
@@ -20,9 +20,7 @@
     </mat-form-field>
     <section>
       <div>
-        <button mat-raised-button type="button" class="full-width" i18n>
-          Change
-        </button>
+        <button mat-raised-button class="full-width" i18n>Change</button>
       </div>
     </section>
   </form>

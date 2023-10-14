@@ -35,14 +35,40 @@ const _settingsReducer = createReducer(
   initialState,
   on(loadSettings, state => state),
   on(addSettings, (state, { settings }): AppSettings => {
-    const newSettings = {
+    // Merge the new settings with the current state settings for each sub-property
+    const mergedSettings: AppSettings = {
       ...state,
-      supplier: { ...settings.supplier },
+      ...settings,
+      supplier: {
+        ...state.supplier,
+        ...settings.supplier,
+      },
+      resourceAvailability: {
+        ...state.resourceAvailability,
+        ...settings.resourceAvailability,
+        resourceTime: {
+          ...state.resourceAvailability?.resourceTime,
+          ...settings.resourceAvailability?.resourceTime,
+        },
+        reservation: {
+          ...state.resourceAvailability?.reservation,
+          ...settings.resourceAvailability?.reservation,
+        },
+      },
+      resourceType: {
+        ...state.resourceType,
+        ...settings.resourceType,
+      },
+      scheduler: {
+        ...state.scheduler,
+        ...settings.scheduler,
+      },
     };
 
-    return newSettings;
+    return mergedSettings;
   })
 );
+
 export function settingsReducer(state: AppSettings | undefined, action: any) {
   return _settingsReducer(state, action);
 }

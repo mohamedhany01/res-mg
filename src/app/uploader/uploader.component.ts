@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BreakpointService } from '../services/breakpoint.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { AppSettings } from '../store/modules/app-settings.interface';
 import { Store } from '@ngrx/store';
 import { selectSettings } from '../store/selectors/app.selector';
+import { addSettings } from '../store/actions/app.action';
 
 @Component({
   selector: 'app-uploader',
@@ -17,13 +18,17 @@ export class UploaderComponent implements OnInit {
   uploadForm!: FormGroup;
 
   isMedium$: Observable<boolean> = this.breakpoint.isViewportMedium();
-  loadedSettings: AppSettings | null = null;
+
+  appSettings$: Observable<AppSettings>;
+  appSettingsSubscription!: Subscription;
 
   constructor(
     private store: Store,
     private builder: FormBuilder,
     private breakpoint: BreakpointService
   ) {
+    this.appSettings$ = this.store.select(selectSettings);
+
     this.uploadedImg = '';
     this.img = '';
   }
@@ -37,12 +42,6 @@ export class UploaderComponent implements OnInit {
         updateOn: 'submit',
       }
     );
-
-    this.store.select(selectSettings).subscribe(settings => {
-      if (settings) {
-        this.loadedSettings = settings;
-      }
-    });
   }
 
   changeImg() {
@@ -50,5 +49,14 @@ export class UploaderComponent implements OnInit {
 
     this.img = `../../assets/avatars/${blob.name}`;
     console.log(this.img);
+    this.store.dispatch(
+      addSettings({
+        settings: {
+          supplier: {
+            avatarUrl: this.img,
+          },
+        },
+      })
+    );
   }
 }

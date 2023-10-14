@@ -1,35 +1,40 @@
 <!-- {{ loadedSettings | json }} -->
 <!-- {{ newSettings | json }} -->
 <section class="resource-options">
-  <form>
+  <form (ngSubmit)="onSubmit()">
     <mat-card class="card">
       <div class="options">
         <div class="availability">
           <mat-form-field class="full-width">
             <mat-label i18n>Resource availability</mat-label>
-            <input matInput type="number" />
+            <input
+              matInput
+              (change)="onChange()"
+              type="number"
+              name="availabilityTime"
+              [(ngModel)]="availabilityTime" />
           </mat-form-field>
         </div>
 
         <div ngClass="resource-time {{ (isMedium$ | async) ? 'block' : '' }}">
           <div class="triggers">
             <div i18n>Resource Time</div>
-            <mat-checkbox i18n>Service time</mat-checkbox>
             <mat-checkbox
+              (change)="onChange()"
+              name="serviceTime"
+              [(ngModel)]="serviceTime"
+              i18n
+              >Service time</mat-checkbox
+            >
+            <mat-checkbox
+              (change)="onChange()"
               name="fixedTime"
-              [(ngModel)]="
-                (newSettings.resourceAvailability?.resourceTime)!.fixedTime
-              "
+              [(ngModel)]="fixedTime"
               i18n
               >Fixed time</mat-checkbox
             >
           </div>
-          <div
-            *ngIf="
-              loadedSettings?.resourceAvailability?.resourceTime?.fixedTime ||
-              newSettings?.resourceAvailability?.resourceTime?.fixedTime
-            "
-            class="log">
+          <div *ngIf="fixedTime" class="log">
             <mat-form-field
               ngClass="{{ (isMedium$ | async) ? 'full-width' : '' }}">
               <input matInput type="number" />
@@ -40,22 +45,22 @@
         <div ngClass="reservation {{ (isMedium$ | async) ? 'block' : '' }}">
           <div class="triggers">
             <div i18n>Reservation</div>
-            <mat-checkbox i18n>One time reservation</mat-checkbox>
             <mat-checkbox
+              (change)="onChange()"
+              name="once"
+              [(ngModel)]="once"
+              i18n
+              >One time reservation</mat-checkbox
+            >
+            <mat-checkbox
+              (change)="onChange()"
               name="multiple"
-              [(ngModel)]="
-                (newSettings.resourceAvailability?.reservation)!.multiple
-              "
+              [(ngModel)]="multiple"
               i18n
               >Multiple reservation</mat-checkbox
             >
           </div>
-          <div
-            *ngIf="
-              loadedSettings?.resourceAvailability?.reservation?.multiple ||
-              newSettings?.resourceAvailability?.reservation?.multiple
-            "
-            class="log">
+          <div *ngIf="multiple" class="log">
             <mat-form-field
               ngClass="{{ (isMedium$ | async) ? 'full-width' : '' }}">
               <input matInput type="number" />

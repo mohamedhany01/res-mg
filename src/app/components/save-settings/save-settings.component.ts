@@ -29,11 +29,4 @@ export class SaveSettingsComponent {
       alert(JSON.stringify(settings));
     });
   }
-
-  ngOnDestroy() {
-    console.log('Destroyed');
-    if (this.appSettingsSubscription) {
-      this.appSettingsSubscription.unsubscribe();
-    }
-  }
 }

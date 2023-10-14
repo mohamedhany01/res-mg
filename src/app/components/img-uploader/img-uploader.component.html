@@ -3,7 +3,6 @@
 <section class="img-uploader">
   <form (ngSubmit)="onSubmit()">
     <mat-card class="card">
-      <!-- <button type="submit">Save</button> -->
       <mat-card-header>
         <mat-card-title-group
           ngClass="supplier-info {{ (isMedium$ | async) ? 'block' : '' }}">
@@ -14,11 +13,11 @@
             <mat-form-field class="full-width">
               <mat-label i18n>Supplier Name</mat-label>
               <input
-                [(ngModel)]="newSettings.supplier.name"
+                [(ngModel)]="name"
+                [value]="(appSettings$ | async)?.supplier?.name"
                 name="name"
                 matInput />
             </mat-form-field>
-            <!-- <span>{{ loadedSettings?.supplier?.name }}</span> -->
           </div>
         </mat-card-title-group>
       </mat-card-header>

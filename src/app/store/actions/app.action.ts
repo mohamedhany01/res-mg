@@ -3,7 +3,7 @@ import { AppSettings } from '../modules/app-settings.interface';
 
 export const addSettings = createAction(
   '[add Settings] add',
-  props<{ settings: AppSettings }>()
+  props<{ settings: Partial<AppSettings> }>()
 );
 
 export const loadSettings = createAction(

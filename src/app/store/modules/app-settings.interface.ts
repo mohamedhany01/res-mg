@@ -4,7 +4,7 @@ import { Scheduler } from './scheduler.interface';
 import { Supplier } from './supplier.interface';
 
 export interface AppSettings {
-  supplier: Supplier;
+  supplier?: Supplier;
   resourceType?: ResourceType;
   resourceAvailability?: ResourceAvailability;
   scheduler?: Scheduler;
