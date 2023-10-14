@@ -28,5 +28,7 @@ export class SaveSettingsComponent {
     this.appSettingsSubscription = this.appSettings$.subscribe(settings => {
       alert(JSON.stringify(settings));
     });
+
+    this.appSettingsSubscription.unsubscribe();
   }
 }
