@@ -1,27 +1,36 @@
-# ResMg
+# [Resource Manager Task](https://www.figma.com/file/eAViAP8tRmbeK3aHfkbAyl/Untitled)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.6.
 
-## Development server
+## Installation
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+1. Make sure you installed Node.js with npm
+2. Clone the repository and run `npm install` or `npm i`
+3. Wait until dependencies are downloaded
+4. Now, run `npm start:fly` to start the development server on `http://localhost:4200/`
 
-## Code scaffolding
+## Internationalization
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+This project includes two languages Arabic and English UI, to use them do the following:
 
-## Build
+### English
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+On the `main` branch the default locale is English, to run it make sure you are:
 
-## Running unit tests
+- On the `main` branch by running `git switch main`
+- Run `npm start:fly` to start the development server on `http://localhost:4200/`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Arabic
 
-## Running end-to-end tests
+On the `ar-version` branch the default locale is Arabic, to run it make sure you are:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+- On the `ar-version` branch by running `git switch ar-version`
+- Run `npm start:fly` to start the development server on `http://localhost:4200/`
 
-## Further help
+## Live Demo (English version)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Watch it on [Netlify](https://atech-resmg.netlify.app/)
+
+## Overview
+
+Watch the video on [YouTube]()
