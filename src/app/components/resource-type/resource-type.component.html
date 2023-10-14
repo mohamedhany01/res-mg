@@ -2,8 +2,16 @@
   <mat-card class="card">
     <div ngClass="settings {{ (isMedium$ | async) ? 'block' : '' }}">
       <div i18n>Select resource type</div>
-      <mat-checkbox i18n>One Day</mat-checkbox>
-      <mat-checkbox i18n>More that one day</mat-checkbox>
+      <mat-checkbox name="once" [(ngModel)]="once" (change)="onChange()" i18n
+        >One Day</mat-checkbox
+      >
+      <mat-checkbox
+        name="multiple"
+        [(ngModel)]="multiple"
+        (change)="onChange()"
+        i18n
+        >More that one day</mat-checkbox
+      >
     </div>
   </mat-card>
 </section>
