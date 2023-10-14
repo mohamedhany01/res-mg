@@ -7,16 +7,19 @@
   margin-bottom: 2.5rem;
 }
 
-/* .options .triggers {
-  display: flex;
-  align-items: center;
-} */
-
 .resource-time,
 .reservation {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.resource-time.block {
+  display: block;
+}
+
+.reservation.block {
+  display: block;
 }
 
 .full-width {

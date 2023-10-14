@@ -11,7 +11,7 @@
           </mat-form-field>
         </div>
 
-        <div class="resource-time">
+        <div ngClass="resource-time {{ (isMedium$ | async) ? 'block' : '' }}">
           <div class="triggers">
             <div i18n>Resource Time</div>
             <mat-checkbox i18n>Service time</mat-checkbox>
@@ -30,13 +30,14 @@
               newSettings?.resourceAvailability?.resourceTime?.fixedTime
             "
             class="log">
-            <mat-form-field>
+            <mat-form-field
+              ngClass="{{ (isMedium$ | async) ? 'full-width' : '' }}">
               <input matInput type="number" />
             </mat-form-field>
           </div>
         </div>
 
-        <div class="reservation">
+        <div ngClass="reservation {{ (isMedium$ | async) ? 'block' : '' }}">
           <div class="triggers">
             <div i18n>Reservation</div>
             <mat-checkbox i18n>One time reservation</mat-checkbox>
@@ -55,7 +56,8 @@
               newSettings?.resourceAvailability?.reservation?.multiple
             "
             class="log">
-            <mat-form-field>
+            <mat-form-field
+              ngClass="{{ (isMedium$ | async) ? 'full-width' : '' }}">
               <input matInput type="number" />
             </mat-form-field>
           </div>
