@@ -1,3 +1,4 @@
+{{ appSettings$ | async | json }}
 <mat-card class="card">
   <div ngClass="settings-wrapper {{ (isExtraSmall$ | async) ? 'block' : '' }}">
     <div class="back">
@@ -21,7 +22,11 @@
       <div ngClass="buttons {{ (isExtraSmall$ | async) ? 'block' : '' }}">
         <div
           ngClass="{{ (isExtraSmall$ | async) ? 'margin-y' : 'margin-right' }}">
-          <button mat-flat-button color="primary" class="full-width">
+          <button
+            mat-flat-button
+            color="primary"
+            class="full-width"
+            (click)="saveChanges()">
             Save changes
           </button>
         </div>
