@@ -2,15 +2,22 @@
   <div class="day-extra-wrapper">
     <div ngClass="day-settings {{ (isMedium$ | async) ? 'block' : '' }}">
       <div>
-        <mat-checkbox formControlName="active">{{ name }}</mat-checkbox>
+        <mat-checkbox
+          [checked]="activeCheck"
+          (change)="activeChanged($event)"
+          formControlName="active"
+          >{{ name }}</mat-checkbox
+        >
       </div>
       <div
-        *ngIf="schedulerForm.value.active"
+        *ngIf="activeCheck"
         ngClass="settings-row {{ (isMedium$ | async) ? 'block' : '' }}">
         <div ngClass="date {{ (isMedium$ | async) ? 'no-margin' : '' }}">
           <mat-form-field class="margin-right">
             <mat-label i18n>Time to start</mat-label>
             <input
+              (dateChange)="startDateChanged(startData.value)"
+              #startData
               matInput
               [matDatepicker]="startPicker"
               formControlName="start" />
@@ -24,7 +31,12 @@
           >
           <mat-form-field>
             <mat-label i18n>Time to end</mat-label>
-            <input matInput [matDatepicker]="endPicker" formControlName="end" />
+            <input
+              (dateChange)="endDateChanged(endData.value)"
+              #endData
+              matInput
+              [matDatepicker]="endPicker"
+              formControlName="end" />
             <mat-datepicker-toggle
               matIconSuffix
               [for]="endPicker"></mat-datepicker-toggle>

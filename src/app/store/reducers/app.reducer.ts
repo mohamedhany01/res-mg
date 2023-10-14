@@ -2,7 +2,20 @@ import { addSettings, loadSettings } from '../actions/app.action';
 import { AppSettings } from '../modules/app-settings.interface';
 
 import { createReducer, on } from '@ngrx/store';
+import { Day } from '../modules/day.interface';
 
+const defaultDays: Day[] = [];
+
+for (let i = 0; i < 7; i++) {
+  const d = {
+    active: false,
+    startData: '',
+    endDate: '',
+    nested: [],
+  };
+
+  defaultDays.push(d);
+}
 export const initialState: Readonly<AppSettings> = {
   supplier: {
     name: '',
@@ -25,9 +38,7 @@ export const initialState: Readonly<AppSettings> = {
     moreThanOneDay: false,
   },
   scheduler: {
-    active: false,
-    startData: '',
-    endDate: '',
+    days: defaultDays,
   },
 };
 
@@ -35,7 +46,6 @@ const _settingsReducer = createReducer(
   initialState,
   on(loadSettings, state => state),
   on(addSettings, (state, { settings }): AppSettings => {
-    // Merge the new settings with the current state settings for each sub-property
     const mergedSettings: AppSettings = {
       ...state,
       ...settings,
@@ -61,7 +71,7 @@ const _settingsReducer = createReducer(
       },
       scheduler: {
         ...state.scheduler,
-        ...settings.scheduler,
+        days: settings.scheduler?.days || state.scheduler?.days,
       },
     };
 

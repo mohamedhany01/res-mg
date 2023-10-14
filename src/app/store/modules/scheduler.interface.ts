@@ -1,5 +1,5 @@
+import { Day } from './day.interface';
+
 export interface Scheduler {
-  active?: boolean;
-  startData?: string;
-  endDate?: string;
+  days: Day[] | undefined;
 }
