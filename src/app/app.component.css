@@ -6,6 +6,11 @@ main {
   padding: 2rem;
 }
 
+.upper-section {
+  grid-column-start: 1;
+  grid-column-end: -1;
+}
+
 main.small-screen {
   display: block;
 }

@@ -1,0 +1,49 @@
+.settings-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.settings-wrapper.block {
+  display: block;
+}
+
+.back {
+  display: flex;
+  align-items: center;
+}
+
+.back.block {
+  display: block;
+}
+
+.back h3 {
+  margin: 0;
+  margin: 0 1rem;
+  font-size: 1.5rem;
+}
+
+.settings {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.settings.block {
+  display: block;
+}
+
+.margin-right {
+  margin-right: 1rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+.buttons.block {
+  display: block;
+}
+
+.margin-y {
+  margin: 1rem 0;
+}

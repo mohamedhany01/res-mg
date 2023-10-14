@@ -1,0 +1,36 @@
+<mat-card class="card">
+  <div ngClass="settings-wrapper {{ (isExtraSmall$ | async) ? 'block' : '' }}">
+    <div class="back">
+      <div class="button-container">
+        <button mat-mini-fab color="primary" type="button">
+          <!-- <mat-icon>arrow_forward</mat-icon> -->
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+      </div>
+      <div>
+        <h3 i18n>Add resources</h3>
+      </div>
+    </div>
+    <div
+      ngClass="settings {{
+        (isExtraSmall$ | async) ? 'block margin-top-2' : ''
+      }}">
+      <div>
+        <mat-checkbox i18n>Activated</mat-checkbox>
+      </div>
+      <div ngClass="buttons {{ (isExtraSmall$ | async) ? 'block' : '' }}">
+        <div
+          ngClass="{{ (isExtraSmall$ | async) ? 'margin-y' : 'margin-right' }}">
+          <button mat-flat-button color="primary" class="full-width">
+            Save changes
+          </button>
+        </div>
+        <div>
+          <button mat-flat-button color="warn" class="full-width">
+            Remove resource
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>

@@ -24,6 +24,7 @@ import { MatListModule } from '@angular/material/list';
 import { DayComponent } from './components/scheduler/day/day.component';
 import { UploaderComponent } from './uploader/uploader.component';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { SaveSettingsComponent } from './components/save-settings/save-settings.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     SchedulerComponent,
     DayComponent,
     UploaderComponent,
+    SaveSettingsComponent,
   ],
   imports: [
     BrowserModule,
