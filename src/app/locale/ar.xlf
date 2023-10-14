@@ -6,7 +6,7 @@
         <source><x id="PH" equiv-text="this.title"/></source>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/app.component.ts</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">19</context>
         </context-group>
       </trans-unit>
       <trans-unit id="638853778925067319" datatype="html">
@@ -14,7 +14,7 @@
         <target>اسم المورد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/img-uploader/img-uploader.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">14</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3770458278723610599" datatype="html">
@@ -30,7 +30,7 @@
         <target>وقت المورد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">16</context>
+          <context context-type="linenumber">21</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5101181365497646575" datatype="html">
@@ -38,7 +38,7 @@
         <target>وقت الخدمة</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">17</context>
+          <context context-type="linenumber">27</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5423958154909925236" datatype="html">
@@ -46,7 +46,7 @@
         <target>الوقت ثابت</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6545183602232691048" datatype="html">
@@ -54,7 +54,7 @@
         <target>الحجز المتعدد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">41</context>
+          <context context-type="linenumber">47</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5203232833051236078" datatype="html">
@@ -62,7 +62,7 @@
         <target>حجز واحد فقط</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">42</context>
+          <context context-type="linenumber">53</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3721837758970059032" datatype="html">
@@ -70,7 +70,7 @@
         <target>حجز اكثر من شخص لنفس الموعد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-option/resource-option.component.html</context>
-          <context context-type="linenumber">49</context>
+          <context context-type="linenumber">60</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3490389904880488184" datatype="html">
@@ -86,7 +86,7 @@
         <target>حجز خلال اليوم</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-type/resource-type.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">6</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1656522007502925031" datatype="html">
@@ -94,7 +94,23 @@
         <target>حجز مدة ( أكثر من يوم )</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/resource-type/resource-type.component.html</context>
-          <context context-type="linenumber">6</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4294561982244741824" datatype="html">
+        <source>Add resources</source>
+        <traget>إضافة موارد</traget>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/save-settings/save-settings.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7195017997146645546" datatype="html">
+        <source>Activated</source>
+        <traget>مفعلة</traget>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/components/save-settings/save-settings.component.html</context>
+          <context context-type="linenumber">20</context>
         </context-group>
       </trans-unit>
       <trans-unit id="263223603269994382" datatype="html">
@@ -102,11 +118,11 @@
         <target>وقت البدء</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
-          <context context-type="linenumber">10</context>
+          <context context-type="linenumber">17</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
-          <context context-type="linenumber">48</context>
+          <context context-type="linenumber">66</context>
         </context-group>
       </trans-unit>
       <trans-unit id="213067598216842173" datatype="html">
@@ -114,11 +130,11 @@
         <target>وقت الانتهاء</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">33</context>
         </context-group>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/day/day.component.html</context>
-          <context context-type="linenumber">60</context>
+          <context context-type="linenumber">81</context>
         </context-group>
       </trans-unit>
       <trans-unit id="5413691976882995270" datatype="html">
@@ -126,7 +142,7 @@
         <target>حدد مواعيد العمل للمورد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">5</context>
+          <context context-type="linenumber">8</context>
         </context-group>
       </trans-unit>
       <trans-unit id="2025228978938480835" datatype="html">
@@ -134,23 +150,23 @@
         <target>تكوين إعدادات الأسبوع الخاص بك هنا. ما عليك سوى تحريك أشرطة التمرير وإضافة / إزالة أوقات الراحة لإعداد ساعات العمل.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">7,8</context>
+          <context context-type="linenumber">10,11</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8635746400237530953" datatype="html">
-        <source>Basic settings</source>
+      <trans-unit id="4275434028602666492" datatype="html">
+        <source> Basic settings </source>
         <target>إعدادات تقليدية</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">12</context>
+          <context context-type="linenumber">20,22</context>
         </context-group>
       </trans-unit>
-      <trans-unit id="8821221480638803282" datatype="html">
-        <source>Advanced settings</source>
+      <trans-unit id="361718841228219699" datatype="html">
+        <source> Advanced settings </source>
         <target>إعدادات متقدمة</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">13</context>
+          <context context-type="linenumber">27,29</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1830554030016307335" datatype="html">
@@ -158,7 +174,7 @@
         <target>السبت</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">18</context>
+          <context context-type="linenumber">34</context>
         </context-group>
       </trans-unit>
       <trans-unit id="6950140976689343775" datatype="html">
@@ -166,7 +182,7 @@
         <target>الاحد</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">19</context>
+          <context context-type="linenumber">35</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8739442281958563044" datatype="html">
@@ -174,7 +190,7 @@
         <target>الإثنين</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">20</context>
+          <context context-type="linenumber">36</context>
         </context-group>
       </trans-unit>
       <trans-unit id="9176037901730521018" datatype="html">
@@ -182,7 +198,7 @@
         <target>الثلاثاء</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">21</context>
+          <context context-type="linenumber">37</context>
         </context-group>
       </trans-unit>
       <trans-unit id="8798932904948432529" datatype="html">
@@ -190,7 +206,7 @@
         <target>الأربعاء</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">22</context>
+          <context context-type="linenumber">38</context>
         </context-group>
       </trans-unit>
       <trans-unit id="1433683192825895947" datatype="html">
@@ -198,7 +214,7 @@
         <target>الخميس</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">23</context>
+          <context context-type="linenumber">39</context>
         </context-group>
       </trans-unit>
       <trans-unit id="3730139500618908668" datatype="html">
@@ -206,7 +222,15 @@
         <target>الجمعة</target>
         <context-group purpose="location">
           <context context-type="sourcefile">src/app/components/scheduler/scheduler.component.html</context>
-          <context context-type="linenumber">24</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1230154438678955604" datatype="html">
+        <source>Change</source>
+        <target>تغير</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/uploader/uploader.component.html</context>
+          <context context-type="linenumber">23</context>
         </context-group>
       </trans-unit>
     </body>
