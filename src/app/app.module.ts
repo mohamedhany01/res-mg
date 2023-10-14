@@ -22,6 +22,8 @@ import { settingsReducer } from './store/reducers/app.reducer';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatListModule } from '@angular/material/list';
 import { DayComponent } from './components/scheduler/day/day.component';
+import { UploaderComponent } from './uploader/uploader.component';
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { DayComponent } from './components/scheduler/day/day.component';
     ResourceOptionComponent,
     SchedulerComponent,
     DayComponent,
+    UploaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +51,7 @@ import { DayComponent } from './components/scheduler/day/day.component';
     MatIconModule,
     MatRadioModule,
     MatListModule,
+    NgxMatFileInputModule,
     StoreModule.forRoot({ settings: settingsReducer }, {}),
   ],
   providers: [],

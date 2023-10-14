@@ -1,0 +1,17 @@
+<!-- {{uploadForm.value| json}} -->
+<form class="decoder-form" [formGroup]="uploadForm" (ngSubmit)="decode()">
+  <mat-form-field class="upload-button">
+    <div class="button-wrapper">
+      <ngx-mat-file-input
+        placeholder="Image"
+        formControlName="uploadedImg"
+        accept=".png, .jpg, .jpeg">
+      </ngx-mat-file-input>
+    </div>
+  </mat-form-field>
+  <section>
+    <div>
+      <button mat-raised-button type="submit">Change</button>
+    </div>
+  </section>
+</form>
