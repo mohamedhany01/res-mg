@@ -33,4 +33,4 @@ Watch it on [Netlify](https://atech-resmg.netlify.app/)
 
 ## Overview
 
-Watch the video on [YouTube]()
+Watch the video on [YouTube](https://youtu.be/Vpu-vyDa1HE)
