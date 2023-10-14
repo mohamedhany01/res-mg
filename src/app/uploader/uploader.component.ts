@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { BreakpointService } from '../services/breakpoint.service';
 import { Observable } from 'rxjs';
+import { AppSettings } from '../store/modules/app-settings.interface';
+import { Store } from '@ngrx/store';
+import { selectSettings } from '../store/selectors/app.selector';
 
 @Component({
   selector: 'app-uploader',
@@ -13,9 +16,11 @@ export class UploaderComponent implements OnInit {
   img: string;
   uploadForm!: FormGroup;
 
-  isSmall$: Observable<boolean> = this.breakpoint.isViewportMedium();
+  isMedium$: Observable<boolean> = this.breakpoint.isViewportMedium();
+  loadedSettings: AppSettings | null = null;
 
   constructor(
+    private store: Store,
     private builder: FormBuilder,
     private breakpoint: BreakpointService
   ) {
@@ -32,29 +37,18 @@ export class UploaderComponent implements OnInit {
         updateOn: 'submit',
       }
     );
+
+    this.store.select(selectSettings).subscribe(settings => {
+      if (settings) {
+        this.loadedSettings = settings;
+      }
+    });
   }
 
-  async decode() {
-    // Read the blobs
+  changeImg() {
     const blob = this.uploadForm.value['uploadedImg'];
 
     this.img = `../../assets/avatars/${blob.name}`;
     console.log(this.img);
-    // const tableBlob: File = this.uploadForm.value['decodingTable'];
-    // if (!tableBlob || !tableBlob) {
-    //   return;
-    // }
-    // // Read the data from the uploaded files
-    // this.encodedText = await getFileData(textBlob);
-    // this.decodingTable = await getFileData(tableBlob);
-    // // Decoding the text using the frequencies table and encoding text
-    // const frequencies: Entry[] | null = deserializeFrequencies(
-    //   this.decodingTable
-    // );
-    // const decoder: HuffmanDecoder = new HuffmanDecoder(
-    //   this.encodedText,
-    //   frequencies
-    // );
-    // this.decodedText = decoder.getDecodedText();
   }
 }

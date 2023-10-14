@@ -8,11 +8,7 @@
         <mat-card-title-group
           ngClass="supplier-info {{ (isMedium$ | async) ? 'block' : '' }}">
           <div ngClass="avatar {{ (isMedium$ | async) ? 'center' : '' }}">
-            <img
-              ngClass="{{ (isMedium$ | async) ? 'margin-bottom ' : '' }}"
-              mat-card-sm-image
-              alt="{{ loadedSettings?.supplier?.avatarAlt }}"
-              src="{{ loadedSettings?.supplier?.avatarUrl }}" />
+            <app-uploader></app-uploader>
           </div>
           <div class="supplier-name">
             <mat-form-field class="full-width">

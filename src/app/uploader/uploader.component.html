@@ -1,17 +1,29 @@
 <!-- {{uploadForm.value| json}} -->
-<form class="decoder-form" [formGroup]="uploadForm" (ngSubmit)="decode()">
-  <mat-form-field class="upload-button">
-    <div class="button-wrapper">
-      <ngx-mat-file-input
-        placeholder="Image"
-        formControlName="uploadedImg"
-        accept=".png, .jpg, .jpeg">
-      </ngx-mat-file-input>
-    </div>
-  </mat-form-field>
-  <section>
-    <div>
-      <button mat-raised-button type="submit">Change</button>
-    </div>
-  </section>
-</form>
+<div>
+  <div class="image">
+    <img
+      ngClass="{{ (isMedium$ | async) ? 'margin-bottom ' : '' }}"
+      mat-card-sm-image
+      alt="{{ loadedSettings?.supplier?.avatarAlt }}"
+      src="{{ loadedSettings?.supplier?.avatarUrl }}" />
+  </div>
+  <form class="decoder-form" [formGroup]="uploadForm" (ngSubmit)="changeImg()">
+    <mat-form-field class="upload-button">
+      <div class="button-wrapper">
+        <ngx-mat-file-input
+          placeholder="Select image"
+          formControlName="uploadedImg"
+          accept=".png, .jpg, .jpeg"
+          i18n>
+        </ngx-mat-file-input>
+      </div>
+    </mat-form-field>
+    <section>
+      <div>
+        <button mat-raised-button type="button" class="full-width" i18n>
+          Change
+        </button>
+      </div>
+    </section>
+  </form>
+</div>

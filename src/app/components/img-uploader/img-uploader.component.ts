@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { BreakpointService } from 'src/app/services/breakpoint.service';
-import { addSettings, loadSettings } from 'src/app/store/actions/app.action';
+import { addSettings } from 'src/app/store/actions/app.action';
 import { AppSettings } from 'src/app/store/modules/app-settings.interface';
 import { selectSettings } from 'src/app/store/selectors/app.selector';
 
